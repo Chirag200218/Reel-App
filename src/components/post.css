@@ -1,0 +1,104 @@
+.video-container{
+    height: 75vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+.video-container::-webkit-scrollbar{
+    display: none;
+}
+
+.videos{
+    position: relative;
+    height: 75vh;
+}
+
+ 
+.fa {
+    position: absolute;
+    bottom: 3%;
+    left: 6%;
+    z-index: 1;
+}
+
+.fa h4 {
+    color: white;
+    margin-top: 4%;
+    margin-bottom: 14%;
+    margin-left: 8%;
+    width: 122px;
+    z-index: 1;
+}
+
+.icon-styling{
+    position: absolute;
+    bottom: 28%;
+    left: 7%;
+}
+
+.like{
+    cursor: pointer;
+    color: #e74c3c
+}
+
+.unlike{
+    cursor: pointer;
+    color:white
+}
+
+.chat-styling{
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+}
+
+.modal-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.video-cont{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-cont video{
+    width: 100%;
+    height: 85vh;
+
+
+}
+
+.comment-container{
+    width: 50%;
+    height: 100%;
+}
+/* .modal-video{
+    height: 100%;
+    width: 100%;
+}
+
+.modal-video video{
+    height: 84vh;
+} */
+
+
+
+.unlike2{
+    cursor: pointer;
+    color: black;
+}
+
+.card1{
+    height: 70vh;
+}

@@ -1,0 +1,68 @@
+.spacer{
+    min-height: 12vh;
+}
+.container{
+    min-height: 35vh;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+.upper-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img{
+    flex-basis: 50%;
+}
+
+.info{
+    flex-basis: 40%;
+}
+
+.profile-img img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.profile-videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Profile_videos{
+    width: 20rem;
+    height: 30rem;
+    padding: 0.3rem;
+}
+.Profile_videos video{
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+     
+}
+
+/* .modal-container{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    height: 50vh;
+    width: 50vw;
+} */
+@media only screen and (max-width:620px){ 
+    .profile-img img{
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            margin-left: -12%;
+    }
+    .info h4{
+        font-size: medium;
+        font-weight: bold;
+    }
+    .info h6{
+        font-size: small;
+    }
+}
