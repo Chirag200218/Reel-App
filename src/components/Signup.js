@@ -78,6 +78,7 @@ export default function Signup() {
                         fullname:name,
                         profileUrl: url,
                         createdAt:database.getTimeStamp(),
+                        postIds:[],
                     })
                 })
                 setLoading(false);

@@ -5,6 +5,7 @@ import './post.css'
 
 function Likes({user,post}) {
     const [like,setLike] = useState(null);
+    
     useEffect(()=>{
         let check = post.likes.includes(user.userId)?true:false;
         setLike(check);

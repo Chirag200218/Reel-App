@@ -29,6 +29,7 @@ const useStyles = makeStyles({
     appb:{
         background:'white'
     }
+    
 })
 export default function  Navbar({user}) {
   const [anchorEl, setAnchorEl] = React.useState(null);

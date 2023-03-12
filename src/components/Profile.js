@@ -78,6 +78,7 @@ function Profile() {
         
     }
     useEffect(()=>{
+        console.log("changes"+ id);
         database.users.doc(id).onSnapshot((snap)=>{
             setUserData(snap.data());
         })
@@ -86,23 +87,25 @@ function Profile() {
     useEffect(async()=>{
         if(userData!=null){
             console.log(userData)
-            let parr=[]
-            for(let i=0;i<userData.postIds.length;i++){
-                let postData = await database.posts.doc(userData.postIds[i]).get();
-                parr.push({...postData.data(),postId:postData.id})
-            }
-            setPost(parr);
+            let parr=[];
+            // if(userData.postIds!==undefined){
+                for(let i=0;i<userData.postIds.length;i++){
+                    let postData = await database.posts.doc(userData.postIds[i]).get();
+                    parr.push({postId:postData.id})
+                }
+                setPost(parr);
+            // }
         }
         
     },[userData]);
   return (
     <>
     {
-      
-      posts==null || userData==null ? <CircularProgress color="secondary" />:
+      posts===null ||  userData===null ? <CircularProgress color="secondary" />:
         <>
             <div>
-                
+                {console.log(posts)}
+                {}
                 <Navbar user={userData}/>
                 <div className='spacer'></div>
                 <div className='container'>

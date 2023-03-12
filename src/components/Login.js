@@ -27,7 +27,7 @@ import { AuthContext, AuthProvider } from '../context/AuthContext';
 
 export default function Login() {
     const store = useContext(AuthContext);
-    console.log(store);
+    // console.log(store);
     const useStyles = makeStyles({
         text1: {
             color: 'grey',
@@ -63,7 +63,7 @@ export default function Login() {
             history.push('/');
         }catch(err){
             setError(err+"");
-            console.log(error);
+            // console.log(error);
             setTimeout(()=>{
                 setError('');
                 setLoading(false);
