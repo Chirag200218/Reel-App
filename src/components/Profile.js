@@ -91,8 +91,10 @@ function Profile() {
             // if(userData.postIds!==undefined){
                 for(let i=0;i<userData.postIds.length;i++){
                     let postData = await database.posts.doc(userData.postIds[i]).get();
-                    parr.push({postId:postData.id})
+                    parr.push({postId:postData.id,...postData.data()})
+                    // console.log();
                 }
+                console.log(parr);
                 setPost(parr);
             // }
         }
@@ -133,6 +135,7 @@ function Profile() {
                         {
                              posts.map((post,index)=>(
                                 <React.Fragment key={index}>
+                                    {console.log(post)}
                                     <div>
                                         <div className="Profile_videos">
                                             
