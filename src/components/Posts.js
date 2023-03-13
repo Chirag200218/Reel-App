@@ -79,6 +79,7 @@ function Posts(props) {
                         {
                             posts.map((post, index) => (
                                 <React.Fragment key={index}>
+                                      {console.log(post)}
                                     <div className='videos'>
                                         <Video src={post.purl} />
                                         <div className='like-com'>
@@ -88,8 +89,8 @@ function Posts(props) {
                                             </div>
                                         </div>
                                         <div className='fa' style={{ display: 'flex' }}>
-                                            <Avatar src={props.user.profileUrl} />
-                                            <h4>{props.user.fullname}</h4>
+                                            <Avatar src={post.uProfile} />
+                                            <h4>{post.uName}</h4>
                                         </div>
                                         <Dialog
                                             open={open == post.pId}
